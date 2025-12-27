@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.Domain", "Domain\ControleGastos.Domain\ControleGastos.Domain.csproj", "{9E0E889B-D99D-4689-A1ED-BE88C701DF0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.BuildingBlocks", "ControleGastos.BuildingBlocks\ControleGastos.BuildingBlocks.csproj", "{214A6D59-BCD2-43A9-A971-FE217B7F95F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.Infrastructure", "Infrastructure\ControleGastos.Infrastructure\ControleGastos.Infrastructure.csproj", "{81D741F6-88F1-46CA-A19F-E766D2AD28E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{214A6D59-BCD2-43A9-A971-FE217B7F95F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{214A6D59-BCD2-43A9-A971-FE217B7F95F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{214A6D59-BCD2-43A9-A971-FE217B7F95F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D741F6-88F1-46CA-A19F-E766D2AD28E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D741F6-88F1-46CA-A19F-E766D2AD28E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D741F6-88F1-46CA-A19F-E766D2AD28E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D741F6-88F1-46CA-A19F-E766D2AD28E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
