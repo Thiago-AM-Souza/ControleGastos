@@ -9,7 +9,7 @@ namespace ControleGastos.Infrastructure.Database.Configurations.Categorias
     {
         public void Configure(EntityTypeBuilder<Categoria> builder)
         {
-            builder.ToTable("categoria", "categorias");
+            builder.ToTable("categorias", "categoria");
 
             builder.HasKey(x => x.Id);
 

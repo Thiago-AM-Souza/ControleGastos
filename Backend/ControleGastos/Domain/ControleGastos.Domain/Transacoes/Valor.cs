@@ -7,6 +7,9 @@ namespace ControleGastos.Domain.Transacoes
         private const decimal _valorBase = 0;
         public decimal Total { get; init; }
 
+        // Construtor para EF
+        protected Valor() { }
+
         public Valor(decimal valor)
         {
             if (valor <= _valorBase)

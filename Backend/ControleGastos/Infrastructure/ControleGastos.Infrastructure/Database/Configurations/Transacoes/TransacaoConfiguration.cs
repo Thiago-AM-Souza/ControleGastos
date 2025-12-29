@@ -9,7 +9,7 @@ namespace ControleGastos.Infrastructure.Database.Configurations.Transacoes
     {
         public void Configure(EntityTypeBuilder<Transacao> builder)
         {
-            builder.ToTable("transacao", "transacoes");
+            builder.ToTable("transacoes", "transacao");
 
             builder.HasKey(x => x.Id);
 
