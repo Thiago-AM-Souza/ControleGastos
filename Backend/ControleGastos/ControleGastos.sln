@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.WebApi", "WebApi\ControleGastos.WebApi\ControleGastos.WebApi.csproj", "{738DD0F9-1A08-4B1E-8316-65216D4DFE08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleGastos.Application", "Application\ControleGastos.Application\ControleGastos.Application.csproj", "{B35D75CA-597C-4789-B952-93746D005EEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{738DD0F9-1A08-4B1E-8316-65216D4DFE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{738DD0F9-1A08-4B1E-8316-65216D4DFE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{738DD0F9-1A08-4B1E-8316-65216D4DFE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35D75CA-597C-4789-B952-93746D005EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35D75CA-597C-4789-B952-93746D005EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35D75CA-597C-4789-B952-93746D005EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35D75CA-597C-4789-B952-93746D005EEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
