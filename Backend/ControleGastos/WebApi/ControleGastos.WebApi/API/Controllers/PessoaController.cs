@@ -1,4 +1,7 @@
-﻿using ControleGastos.Application.Commands.Pessoa.Cadastrar;
+﻿using ControleGastos.Application.Pessoas.Commands.Cadastrar;
+using ControleGastos.Application.Pessoas.Commands.Deletar;
+using ControleGastos.Application.Pessoas.Queries.Listar;
+using ControleGastos.BuildingBlocks.Pagination;
 using ControleGastos.WebApi.API.Requests.Pessoa;
 using ControleGastos.WebApi.API.Responses.Pessoa;
 using Mapster;
@@ -30,6 +33,26 @@ namespace ControleGastos.WebApi.API.Controllers
             var response = result.Adapt<CadastrarPessoaResponse>();
 
             return Results.Created($"/pessoa/{response.Id}", response);
+        }
+
+        [HttpDelete]
+        public async Task<IResult> Deletar(Guid id)
+        {
+            var command = new DeletarPessoaCommand(id);
+            
+            var result = await _mediator.Send(command);
+
+            return Results.Ok(result.Sucesso);
+        }
+
+        [HttpGet]
+        public async Task<IResult> Listar([FromQuery] PaginationRequest request)
+        {
+            var result = await _mediator.Send(new ListarPessoasQuery(request));
+
+            var response = new ListarPessoasResponse(result.Pessoas);
+
+            return Results.Ok(response);
         }
     }
 }

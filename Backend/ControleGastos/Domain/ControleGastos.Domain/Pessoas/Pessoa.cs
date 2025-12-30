@@ -17,7 +17,7 @@ namespace ControleGastos.Domain.Pessoas
                       DateTime dataNascimento)
         {
             Nome = nome;
-            DataNascimento = dataNascimento;
+            DataNascimento = dataNascimento.ToUniversalTime();
         }
     }
 }

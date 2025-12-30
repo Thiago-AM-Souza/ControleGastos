@@ -1,7 +1,7 @@
 ﻿using ControleGastos.BuildingBlocks.CQRS;
 using FluentValidation;
 
-namespace ControleGastos.Application.Commands.Pessoa.Cadastrar
+namespace ControleGastos.Application.Pessoas.Commands.Cadastrar
 {
     public record CadastrarPessoaCommand(string Nome,
                                          DateTime DataNascimento) : ICommand<CadastrarPessoaResult>;

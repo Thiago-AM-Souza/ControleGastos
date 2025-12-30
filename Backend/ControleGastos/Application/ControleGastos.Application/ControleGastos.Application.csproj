@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ControleGastos.BuildingBlocks\ControleGastos.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\Domain\ControleGastos.Domain\ControleGastos.Domain.csproj" />
   </ItemGroup>
 
 </Project>

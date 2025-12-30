@@ -1,4 +1,6 @@
-﻿using ControleGastos.Infrastructure.Database;
+﻿using ControleGastos.Domain.Interfaces;
+using ControleGastos.Infrastructure.Database;
+using ControleGastos.Infrastructure.Repositories.Pessoas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,8 @@ namespace ControleGastos.Infrastructure
             {
                 options.UseNpgsql(connectionString);
             });
+
+            services.AddScoped<IPessoaRepository, PessoaRepository>();
 
             return services;
         }
