@@ -1,5 +1,4 @@
-﻿using ControleGastos.BuildingBlocks.CQRS;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace ControleGastos.Application.Pessoas.Commands.Cadastrar
 {

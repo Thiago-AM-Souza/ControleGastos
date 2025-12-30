@@ -1,6 +1,5 @@
 ﻿using ControleGastos.Application.Dtos.Pessoas;
 using ControleGastos.Application.Extensions;
-using ControleGastos.BuildingBlocks.CQRS;
 using ControleGastos.BuildingBlocks.Pagination;
 using ControleGastos.Domain.Interfaces;
 

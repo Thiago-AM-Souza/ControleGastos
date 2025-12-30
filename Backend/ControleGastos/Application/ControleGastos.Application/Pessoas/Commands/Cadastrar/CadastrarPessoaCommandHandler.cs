@@ -1,5 +1,4 @@
-﻿using ControleGastos.BuildingBlocks.CQRS;
-using ControleGastos.Domain.Interfaces;
+﻿using ControleGastos.Domain.Interfaces;
 using ControleGastos.Domain.Pessoas;
 
 namespace ControleGastos.Application.Pessoas.Commands.Cadastrar

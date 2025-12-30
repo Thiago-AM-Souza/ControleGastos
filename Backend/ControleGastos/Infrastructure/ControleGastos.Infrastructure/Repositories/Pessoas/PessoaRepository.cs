@@ -1,4 +1,5 @@
-﻿using ControleGastos.Domain.Interfaces;
+﻿using ControleGastos.Domain.Categorias;
+using ControleGastos.Domain.Interfaces;
 using ControleGastos.Domain.Pessoas;
 using ControleGastos.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
@@ -41,6 +42,11 @@ namespace ControleGastos.Infrastructure.Repositories.Pessoas
                                           .Skip(tamanho * index)
                                           .Take(tamanho)
                                           .ToListAsync(cancellationToken);
+
+            if (pessoas is null)
+            {
+                return Enumerable.Empty<Pessoa>();
+            }
 
             return pessoas;
         }

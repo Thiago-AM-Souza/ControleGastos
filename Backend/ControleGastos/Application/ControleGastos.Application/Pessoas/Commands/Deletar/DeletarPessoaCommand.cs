@@ -1,6 +1,4 @@
-﻿using ControleGastos.BuildingBlocks.CQRS;
-
-namespace ControleGastos.Application.Pessoas.Commands.Deletar
+﻿namespace ControleGastos.Application.Pessoas.Commands.Deletar
 {
     public record DeletarPessoaCommand(Guid Id) : ICommand<DeletarPessoaResult>;
 
