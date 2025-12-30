@@ -2,6 +2,7 @@
 using ControleGastos.Infrastructure.Database;
 using ControleGastos.Infrastructure.Repositories.Categorias;
 using ControleGastos.Infrastructure.Repositories.Pessoas;
+using ControleGastos.Infrastructure.Repositories.Transacoes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,7 @@ namespace ControleGastos.Infrastructure
             // Repositorios
             services.AddScoped<IPessoaRepository, PessoaRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<ITransacaoRepository, TransacaoRepository>();
 
             return services;
         }

@@ -1,4 +1,4 @@
-﻿namespace ControleGastos.BuildingBlocks.Core.DomainObjects
+﻿namespace ControleGastos.Domain.Exceptions
 {
     public abstract class DomainException : Exception
     {

@@ -11,7 +11,8 @@ namespace ControleGastos.Application.Configurations
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {            
             services.AddPessoaModule()
-                    .AddCategoriaModule();
+                    .AddCategoriaModule()
+                    .AddTransacaoModule();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(cfg =>

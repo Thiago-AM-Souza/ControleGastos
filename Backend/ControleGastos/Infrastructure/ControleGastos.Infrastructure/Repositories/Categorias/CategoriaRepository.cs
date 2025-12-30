@@ -1,6 +1,5 @@
 ﻿using ControleGastos.Domain.Categorias;
 using ControleGastos.Domain.Interfaces;
-using ControleGastos.Domain.Pessoas;
 using ControleGastos.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +42,13 @@ namespace ControleGastos.Infrastructure.Repositories.Categorias
             }
 
             return categorias;
+        }
+
+        public async Task<Categoria?> ObterPorId(Guid id)
+        {
+            var categoria = await _dbContext.Categorias.FindAsync(id);
+
+            return categoria;
         }
 
         public Task<long> ObterTotalCadastrados()

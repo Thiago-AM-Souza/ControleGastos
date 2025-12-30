@@ -11,17 +11,8 @@
                          DateTime dataNascimento)
         {
             Id = id;
-            Nome = nome;
-
-            var hoje = DateTime.Today;
-            var idade = hoje.Year - dataNascimento.Year;
-
-            if (dataNascimento.Date > hoje.AddYears(-idade))
-            {
-                idade--;
-            }
-
-            Idade = idade;
+            Nome = nome;            
+            Idade = dataNascimento.ObterIdade();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ControleGastos.Domain.Transacoes.Exceptions
+﻿using ControleGastos.Domain.Exceptions;
+
+namespace ControleGastos.Domain.Transacoes.Exceptions
 {
     public class ValorNegativoException : DomainException
     {
