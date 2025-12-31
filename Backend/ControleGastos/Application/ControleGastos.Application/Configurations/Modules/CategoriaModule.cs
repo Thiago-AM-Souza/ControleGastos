@@ -1,4 +1,5 @@
 ﻿using ControleGastos.Application.Categorias.Commands.Cadastrar;
+using ControleGastos.Application.Categorias.Queries.ConsultaTotaisPorCategoria;
 using ControleGastos.Application.Categorias.Queries.Listar;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,8 +12,10 @@ namespace ControleGastos.Application.Configurations.Modules
         {
             // Commands
             services.AddScoped<IRequestHandler<CadastrarCategoriaCommand, CadastrarCategoriaResult>, CadastrarCategoriaCommandHandler>();
+            
+            // Queries
             services.AddScoped<IRequestHandler<ListarCategoriasQuery, ListarCategoriasResult>, ListarCategoriasQueryHandler>();
-
+            services.AddScoped<IRequestHandler<ConsultaTotaisPorCategoriaQuery, IReadOnlyList<ConsultaTotaisPorCategoriaResult>>, ConsultaTotaisPorCategoriaQueryHandler>();
 
             return services;
         }

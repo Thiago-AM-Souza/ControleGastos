@@ -1,4 +1,5 @@
-﻿using ControleGastos.Application.Pessoas.Queries;
+﻿using ControleGastos.Application.Categorias.Queries;
+using ControleGastos.Application.Pessoas.Queries;
 using ControleGastos.Domain.Interfaces;
 using ControleGastos.Infrastructure.Database;
 using ControleGastos.Infrastructure.Repositories.Categorias;
@@ -35,6 +36,7 @@ namespace ControleGastos.Infrastructure
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<ITransacaoRepository, TransacaoRepository>();
             services.AddScoped<IPessoaQueryRepository, PessoaQueryRepository>();
+            services.AddScoped<ICategoriaQueryRepository, CategoriaQueryRepository>();
 
             return services;
         }

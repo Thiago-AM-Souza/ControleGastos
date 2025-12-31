@@ -56,7 +56,7 @@ namespace ControleGastos.WebApi.API.Controllers
             return Results.Ok(response);
         }
 
-        [HttpGet("/consultar-totais")]
+        [HttpGet("consultar-totais")]
         public async Task<IResult> ConsultarTotalPorPessoa()
         {
             var result = await _mediator.Send(new ConsultaTotaisPorPessoaQuery());
