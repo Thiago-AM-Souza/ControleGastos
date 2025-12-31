@@ -3,7 +3,7 @@ import Sidebar from './sidebar';
 
 function Layout() {
   return (
-    <>
+    <div className="">
       <nav className="navbar navbar-dark bg-primary fixed-top">
         <div className="container-fluid">
           <button
@@ -31,7 +31,7 @@ function Layout() {
           <Outlet />
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

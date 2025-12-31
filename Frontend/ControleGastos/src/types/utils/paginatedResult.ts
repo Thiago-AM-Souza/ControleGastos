@@ -3,4 +3,5 @@ export interface PaginatedResult<T> {
   pageIndex: number;
   pageSize: number;
   totalCount: number;
+  count: number;
 }
