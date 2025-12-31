@@ -30,6 +30,17 @@ namespace ControleGastos.WebApi.API.Configuration
                 });
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
             services.AddTransient<ExceptionHandlingMiddleware>();
 
             return services;
