@@ -16,5 +16,10 @@ namespace ControleGastos.Domain.Categorias
             Descricao = descricao;
             Finalidade = finalidade;
         }
+
+        public void AlterarFinalidade(Finalidade finalidade)
+        {
+            Finalidade = finalidade;
+        }
     }
 }

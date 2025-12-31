@@ -16,7 +16,25 @@ namespace ControleGastos.Application.Categorias.Commands.Cadastrar
 
             if (!finalidadeExiste)
             {
-                // throw
+                throw new FinalidadeInconsistenteException("Finalidade inválida.");
+            }
+
+            var categoriaExistente = await _categoriaRepository.ObterPorDescricao(command.Descricao);
+
+            // O usuario não pode cadastrar categorias com mesma descricao e finalidade
+            if (categoriaExistente is not null 
+                && (int)categoriaExistente.Finalidade == command.Finalidade)
+            {
+                throw new FinalidadeInconsistenteException("Finalidade já existe no banco de dados.");
+            }
+            // caso usuario tente cadastar uma categoria ja existente e
+            // com finalidade diferente apenas altero a finalidade para ambas
+            else if (categoriaExistente is not null 
+                    && (int)categoriaExistente.Finalidade != command.Finalidade)
+            {
+                categoriaExistente.AlterarFinalidade(Finalidade.Ambas);
+                await _categoriaRepository.Atualizar(categoriaExistente);
+                return new CadastrarCategoriaResult(categoriaExistente.Id);
             }
 
             var categoria = new Categoria(command.Descricao,

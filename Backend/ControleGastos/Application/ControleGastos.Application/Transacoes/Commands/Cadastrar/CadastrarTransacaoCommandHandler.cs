@@ -37,7 +37,8 @@ namespace ControleGastos.Application.Transacoes.Commands.Cadastrar
                 throw new NaoEncontradoException("Categoria não encontrada.");
             }
 
-            if ((int)categoria.Finalidade != command.Tipo)
+            if (categoria.Finalidade != (Finalidade)command.Tipo
+                && categoria.Finalidade != Finalidade.Ambas)
             {
                 throw new FinalidadeInconsistenteException("Finalidade e Tipo de transação diferem.");
             }

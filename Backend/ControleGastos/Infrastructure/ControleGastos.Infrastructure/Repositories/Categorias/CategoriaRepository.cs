@@ -9,6 +9,12 @@ namespace ControleGastos.Infrastructure.Repositories.Categorias
     {
         private readonly AppDbContext _dbContext = dbContext;
 
+        public async Task Atualizar(Categoria categoria)
+        {
+            _dbContext.Categorias.Update(categoria);
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task Cadastrar(Categoria categoria)
         {
             await _dbContext.Categorias.AddAsync(categoria);
@@ -42,6 +48,16 @@ namespace ControleGastos.Infrastructure.Repositories.Categorias
             }
 
             return categorias;
+        }
+
+        public async Task<Categoria?> ObterPorDescricao(string descricao)
+        {
+            var categoria = await _dbContext
+                                    .Categorias
+                                    .FirstOrDefaultAsync(x => x.Descricao.ToLower()
+                                                                .Equals(descricao.ToLower()));
+
+            return categoria;
         }
 
         public async Task<Categoria?> ObterPorId(Guid id)
