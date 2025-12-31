@@ -1,5 +1,4 @@
-﻿using ControleGastos.Domain.Categorias;
-using ControleGastos.Domain.Interfaces;
+﻿using ControleGastos.Domain.Interfaces;
 using ControleGastos.Domain.Pessoas;
 using ControleGastos.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;

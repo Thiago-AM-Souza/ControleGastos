@@ -1,5 +1,6 @@
 ﻿using ControleGastos.Application.Pessoas.Commands.Cadastrar;
 using ControleGastos.Application.Pessoas.Commands.Deletar;
+using ControleGastos.Application.Pessoas.Queries.ConsultaTotaisPorPessoa;
 using ControleGastos.Application.Pessoas.Queries.Listar;
 using ControleGastos.BuildingBlocks.Pagination;
 using ControleGastos.WebApi.API.Requests.Pessoa;
@@ -53,6 +54,14 @@ namespace ControleGastos.WebApi.API.Controllers
             var response = new ListarPessoasResponse(result.Pessoas);
 
             return Results.Ok(response);
+        }
+
+        [HttpGet("/consultar-totais")]
+        public async Task<IResult> ConsultarTotalPorPessoa()
+        {
+            var result = await _mediator.Send(new ConsultaTotaisPorPessoaQuery());
+
+            return Results.Ok(result);
         }
     }
 }

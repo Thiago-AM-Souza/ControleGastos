@@ -1,5 +1,6 @@
 ﻿using ControleGastos.Application.Pessoas.Commands.Cadastrar;
 using ControleGastos.Application.Pessoas.Commands.Deletar;
+using ControleGastos.Application.Pessoas.Queries.ConsultaTotaisPorPessoa;
 using ControleGastos.Application.Pessoas.Queries.Listar;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,8 @@ namespace ControleGastos.Application.Configurations.Modules
             services.AddScoped<IRequestHandler<DeletarPessoaCommand, DeletarPessoaResult>, DeletarPessoaCommandHandler>();
 
             // Queries
-            services.AddScoped<IRequestHandler<ListarPessoasQuery, ListarPessoasResult>, ListarPessoasQueryHandler>();            
+            services.AddScoped<IRequestHandler<ListarPessoasQuery, ListarPessoasResult>, ListarPessoasQueryHandler>();
+            services.AddScoped<IRequestHandler<ConsultaTotaisPorPessoaQuery, IReadOnlyList<ConsultaTotaisPorPessoaResult>>, ConsultaTotaisPorPessoaQueryHandler>();
 
             return services;
         }
