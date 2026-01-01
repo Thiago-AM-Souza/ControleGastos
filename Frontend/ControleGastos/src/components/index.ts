@@ -3,3 +3,4 @@ export { default as ConfirmModal } from './ConfirmModal/ConfirmModal';
 export { default as Toast } from './Toast/Toast';
 export { default as PageHeader } from './PageHeader/PageHeader';
 export { default as PaginatedTable } from './PaginatedTable/PaginatedTable';
+export { default as Badge } from './Badge/Badge';

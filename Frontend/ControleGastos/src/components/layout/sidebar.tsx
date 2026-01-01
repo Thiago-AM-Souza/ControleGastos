@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import {
   Users,
+  Tags
 } from 'lucide-react';
 
 const menuItems = [
   { to: '/pessoas', icon: Users, label: 'Pessoas' },
+  { to: '/categorias', icon: Tags, label: 'Categorias' },
 ];
 
 function Sidebar() {

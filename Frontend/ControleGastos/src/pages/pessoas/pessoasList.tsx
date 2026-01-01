@@ -16,7 +16,6 @@ function PessoasList() {
     pageSize: 10,
     totalCount: 0,
     data: [],
-    count: 0,
   });
 
   const [loading, setLoading] = useState(true);
@@ -96,7 +95,7 @@ function PessoasList() {
         columns={columns}
         pageIndex={pessoas.pageIndex}
         pageSize={pessoas.pageSize}
-        totalCount={pessoas.count}
+        totalCount={pessoas.totalCount}
         onPageChange={carregarPessoas}
         loading={loading}
         emptyMessage="Nenhuma pessoa cadastrada"

@@ -4,6 +4,8 @@ import { Layout } from './components';
 import { 
   PessoasList,
   PessoasForm,
+  CategoriasList,
+  CategoriasForm
 } from './pages'
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
         <Route path="/" element={<Layout />}>          
           <Route path="pessoas" element={<PessoasList />} />
           <Route path="pessoas/novo" element={<PessoasForm />} />
+
+          <Route path="categorias" element={<CategoriasList />} />
+          <Route path="categorias/novo" element={<CategoriasForm />} />
         </Route>
       </Routes>
     </BrowserRouter>
