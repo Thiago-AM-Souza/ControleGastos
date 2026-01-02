@@ -1,6 +1,6 @@
-.toast-container {
-  position: fixed;
-  top: 100px;
-  right: 50px;
+.container-toast {
+  position: fixed !important;
+  top: 70px;
+  right: 20px;
   z-index: 100;
 }

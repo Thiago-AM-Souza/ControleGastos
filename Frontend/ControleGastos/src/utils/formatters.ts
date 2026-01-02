@@ -17,3 +17,29 @@ export const getFinalidadeColor = (finalidade: number): string => {
   };
   return colors[finalidade] || 'default';
 };
+
+// Formatação de moeda
+export const formatCurrency = (value: number): string => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(value);
+};
+
+// Labels para tipo de transação
+export const getTipoTransacaoLabel = (tipo: number): string => {
+  const labels: Record<number, string> = {
+    0: 'Despesa',
+    1: 'Receita',
+  };
+  return labels[tipo] || 'Desconhecido';
+};
+
+// Cores para tipo de transação
+export const getTipoTransacaoColor = (tipo: number): string => {
+  return tipo === 1 ? 'success' : 'danger';
+};
+
+
+
+

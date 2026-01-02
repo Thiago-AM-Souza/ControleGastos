@@ -19,4 +19,9 @@ export const categoriaService = {
     return response.data as CadastrarCategoriaResponse;
   },
 
+  buscarTodos: async() : Promise<Categoria[]> => {
+    const response = await api.get('/categoria/listar-todos');
+
+    return response.data;
+  }
 };

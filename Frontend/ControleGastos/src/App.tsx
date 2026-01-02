@@ -5,7 +5,9 @@ import {
   PessoasList,
   PessoasForm,
   CategoriasList,
-  CategoriasForm
+  CategoriasForm,
+  TransacoesList,
+  TransacoesForm
 } from './pages'
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
 
           <Route path="categorias" element={<CategoriasList />} />
           <Route path="categorias/novo" element={<CategoriasForm />} />
+
+          <Route path="transacoes" element={<TransacoesList />} />
+          <Route path="transacoes/novo" element={<TransacoesForm />} />
         </Route>
       </Routes>
     </BrowserRouter>

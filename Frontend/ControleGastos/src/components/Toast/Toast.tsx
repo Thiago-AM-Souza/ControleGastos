@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import './Toast.css';
 
 export interface ToastProps {
   id: string;
@@ -37,7 +38,7 @@ function Toast({ id, type, message, onClose, duration = 3000 }: ToastProps) {
       : 'alert-info';
 
   return (
-    <div className={`toast-container ${alertClass} d-flex align-items-center justify-content-between`} role="alert">
+    <div className={`container-toast alert ${alertClass} d-flex align-items-center justify-content-between`} role="alert">
       <div className="d-flex align-items-center gap-2">
         <Icon size={20} />
         <div>{message}</div>

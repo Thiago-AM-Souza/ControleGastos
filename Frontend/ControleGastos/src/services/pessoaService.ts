@@ -16,6 +16,12 @@ export const pessoaService = {
     return response.data.pessoas;
   },
 
+  async buscarTodos() : Promise<Pessoa[]> {
+    const response = await api.get('/pessoa/listar-todos');
+
+    return response.data;
+  },
+
   async deletar(id: string): Promise<boolean> {
     const response = await api.delete('/pessoa', {
       params: { id },

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageHeader, Toast } from '../../components';
 import { categoriaService } from '../../services/categoriaService';
-import { Finalidade } from '../../types/enums/finalidade';
+import { FINALIDADE } from '../../types';
 import { useToast } from '../../hooks';
 
 function CategoriasForm() {
@@ -100,9 +100,9 @@ function CategoriasForm() {
                 onChange={handleChange}
               >
                 <option value="">Selecione a finalidade</option>
-                <option value={Finalidade.Despesa}>Despesa</option>
-                <option value={Finalidade.Receita}>Receita</option>
-                <option value={Finalidade.Ambas}>Ambas</option>
+                <option value={FINALIDADE.Despesa}>Despesa</option>
+                <option value={FINALIDADE.Receita}>Receita</option>
+                <option value={FINALIDADE.Ambas}>Ambas</option>
               </select>
               {errors.finalidade && (
                 <div className="invalid-feedback">{errors.finalidade}</div>
