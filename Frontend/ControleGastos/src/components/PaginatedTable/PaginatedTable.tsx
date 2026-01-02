@@ -39,7 +39,6 @@ function PaginatedTable<T extends { id: string }>({
       </div>
     );
   }
-  const temProximaPagina = data.length === pageSize;
 
   return (
     <div>
@@ -81,6 +80,7 @@ function PaginatedTable<T extends { id: string }>({
           <div className="text-muted">
             Mostrando {startItem} - {endItem} de {totalCount}
           </div>
+
           <div className="d-flex align-items-center gap-2">
             <button
               className="btn btn-outline-secondary btn-sm"
@@ -90,17 +90,22 @@ function PaginatedTable<T extends { id: string }>({
               <ChevronLeft size={16} />
               Anterior
             </button>
-            <span className="small">Página {pageIndex + 1} de {totalPages}</span>
+
+            <span className="small">
+              Página {pageIndex + 1} de {totalPages}
+            </span>
+
             <button
               className="btn btn-outline-secondary btn-sm"
               onClick={() => onPageChange(pageIndex + 1)}
-              disabled={!temProximaPagina}
+              disabled={pageIndex + 1 >= totalPages}
             >
               Próxima
               <ChevronRight size={16} />
             </button>
           </div>
         </div>
+
       )}
     </div>
   );

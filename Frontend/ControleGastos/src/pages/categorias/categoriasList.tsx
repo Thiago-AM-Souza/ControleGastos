@@ -10,7 +10,7 @@ function CategoriasList() {
   const [categorias, setCategorias] = useState<PaginatedResult<Categoria>>({
     pageIndex: 0,
     pageSize: 10,
-    totalCount: 0,
+    count: 0,
     data: [],
   });
   const [loading, setLoading] = useState(true);
@@ -62,7 +62,7 @@ function CategoriasList() {
         columns={columns}
         pageIndex={categorias.pageIndex}
         pageSize={categorias.pageSize}
-        totalCount={categorias.totalCount}
+        totalCount={categorias.count}
         onPageChange={carregarCategorias}
         loading={loading}
         emptyMessage="Nenhuma categoria cadastrada"

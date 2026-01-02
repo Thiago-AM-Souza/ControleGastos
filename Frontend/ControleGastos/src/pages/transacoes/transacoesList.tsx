@@ -10,7 +10,7 @@ function TransacoesList() {
   const [transacoes, setTransacoes] = useState<PaginatedResult<Transacao>>({
     pageIndex: 0,
     pageSize: 10,
-    totalCount: 0,
+    count: 0,
     data: [],
   });
   const [loading, setLoading] = useState(true);
@@ -80,7 +80,7 @@ function TransacoesList() {
         columns={columns}
         pageIndex={transacoes.pageIndex}
         pageSize={transacoes.pageSize}
-        totalCount={transacoes.totalCount}
+        totalCount={transacoes.count}
         onPageChange={carregarTransacoes}
         loading={loading}
         emptyMessage="Nenhuma transação cadastrada"

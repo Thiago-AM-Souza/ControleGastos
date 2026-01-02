@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { pessoaService } from '../../services/pessoaService';
 import type { Pessoa } from '../../types/models/pessoa/pessoa';
 import type { PaginatedResult  } from '../../types/utils/paginatedResult';
-// import { Link } from 'react-router-dom';
-// import { Plus } from 'lucide-react';
 import { useToast } from '../../hooks';
 import { Trash2 } from 'lucide-react';
 import { PageHeader, PaginatedTable, ConfirmModal, Toast } from '../../components';
@@ -14,7 +12,7 @@ function PessoasList() {
   const [pessoas, setPessoas] = useState<PaginatedResult<Pessoa>>({
     pageIndex: 0,
     pageSize: 10,
-    totalCount: 0,
+    count: 0,
     data: [],
   });
 
@@ -29,10 +27,9 @@ function PessoasList() {
     setLoading(true);
     try {
       const result = await pessoaService.listar(pageIndex, 10);
-      console.log(result);
       setPessoas(result);
     } catch (err) {
-      console.log('Erro ao carregar pessoas');
+      error('Erro ao carregar pessoas');
       console.error(err);
     } finally {
       setLoading(false);
@@ -95,7 +92,7 @@ function PessoasList() {
         columns={columns}
         pageIndex={pessoas.pageIndex}
         pageSize={pessoas.pageSize}
-        totalCount={pessoas.totalCount}
+        totalCount={pessoas.count}
         onPageChange={carregarPessoas}
         loading={loading}
         emptyMessage="Nenhuma pessoa cadastrada"
