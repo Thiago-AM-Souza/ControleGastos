@@ -2,13 +2,15 @@ import { NavLink } from 'react-router-dom';
 import {
   Users,
   Tags,
-  Receipt
+  Receipt,
+  BarChart3
 } from 'lucide-react';
 
 const menuItems = [
   { to: '/pessoas', icon: Users, label: 'Pessoas' },
   { to: '/categorias', icon: Tags, label: 'Categorias' },
   { to: '/transacoes', icon: Receipt, label: 'Transações' },
+    { to: '/relatorios/pessoas', icon: BarChart3, label: 'Relatório Pessoas' },
 ];
 
 function Sidebar() {

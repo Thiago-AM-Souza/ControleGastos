@@ -3,6 +3,7 @@ import type { Pessoa } from '../types/models/pessoa/pessoa';
 import type { PaginatedResult } from '../types/utils/paginatedResult';
 import type { CadastrarPessoaRequest } from '../types/models/pessoa/requests/cadastrarPessoaRequest';
 import type { CadastrarPessoaResponse } from '../types/models/pessoa/response/cadastrarPessoaResponse';
+import type { ConsultaTotalPorPessoa } from '../types';
 
 export const pessoaService = {
   async listar(
@@ -34,5 +35,11 @@ export const pessoaService = {
     const response = await api.post('/pessoa', request);
 
     return response.data as CadastrarPessoaResponse;
+  },
+
+  async consultarTotais(): Promise<ConsultaTotalPorPessoa[]> {
+    const response = await api.get('/pessoa/consultar-totais');
+
+    return response.data;
   }
 };

@@ -4,3 +4,4 @@ export { CategoriasList } from './categorias';
 export { CategoriasForm } from './categorias';
 export { TransacoesList } from './transacoes';
 export { TransacoesForm } from './transacoes';
+export { RelatorioTotaisPorPessoa } from './pessoas'

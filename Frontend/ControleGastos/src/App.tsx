@@ -7,7 +7,8 @@ import {
   CategoriasList,
   CategoriasForm,
   TransacoesList,
-  TransacoesForm
+  TransacoesForm,
+  RelatorioTotaisPorPessoa
 } from './pages'
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
 
           <Route path="transacoes" element={<TransacoesList />} />
           <Route path="transacoes/novo" element={<TransacoesForm />} />
+
+          <Route path="relatorios/pessoas" element={<RelatorioTotaisPorPessoa />} />
         </Route>
       </Routes>
     </BrowserRouter>

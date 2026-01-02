@@ -4,3 +4,4 @@ export { default as Toast } from './Toast/Toast';
 export { default as PageHeader } from './PageHeader/PageHeader';
 export { default as PaginatedTable } from './PaginatedTable/PaginatedTable';
 export { default as Badge } from './Badge/Badge';
+export { default as SummaryCard } from './SummaryCard/SummaryCard';

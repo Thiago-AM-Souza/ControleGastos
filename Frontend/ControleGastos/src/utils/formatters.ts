@@ -41,5 +41,12 @@ export const getTipoTransacaoColor = (tipo: number): string => {
 };
 
 
+// Formatação de moeda com sinal
+export const formatCurrencyWithSign = (value: number): string => {
+  const sign = value >= 0 ? '+' : '';
+  return sign + formatCurrency(value);
+};
+
+
 
 
