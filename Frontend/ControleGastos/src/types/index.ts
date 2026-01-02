@@ -6,3 +6,4 @@ export type { Finalidade } from './enums/finalidade';
 export { FINALIDADE } from './enums/finalidade';
 export { TIPOTRANSACAO } from './enums/tipoTransacao';
 export type { ConsultaTotalPorPessoa } from './models/pessoa/relatorios/consultaTotalPorPessoa';
+export type { ConsultaTotalPorCategoria } from './models/categoria/relatorios/consultaTotalPorCategoria';

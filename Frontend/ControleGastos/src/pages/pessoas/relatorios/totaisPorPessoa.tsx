@@ -126,7 +126,6 @@ function RelatorioTotaisPorPessoa() {
             )}
           </tbody>
 
-          {/* Total geral vindo do banco */}
           {totalGeral && (
             <tfoot>
               <tr>

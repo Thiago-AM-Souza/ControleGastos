@@ -10,7 +10,8 @@ const menuItems = [
   { to: '/pessoas', icon: Users, label: 'Pessoas' },
   { to: '/categorias', icon: Tags, label: 'Categorias' },
   { to: '/transacoes', icon: Receipt, label: 'Transações' },
-    { to: '/relatorios/pessoas', icon: BarChart3, label: 'Relatório Pessoas' },
+  { to: '/relatorios/pessoas', icon: BarChart3, label: 'Relatório Pessoas' },
+  { to: '/relatorios/categorias', icon: BarChart3, label: 'Relatório Categorias' },
 ];
 
 function Sidebar() {

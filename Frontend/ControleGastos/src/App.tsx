@@ -8,7 +8,8 @@ import {
   CategoriasForm,
   TransacoesList,
   TransacoesForm,
-  RelatorioTotaisPorPessoa
+  RelatorioTotaisPorPessoa,
+  RelatorioTotaisPorCategoria
 } from './pages'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="transacoes/novo" element={<TransacoesForm />} />
 
           <Route path="relatorios/pessoas" element={<RelatorioTotaisPorPessoa />} />
+          <Route path="relatorios/categorias" element={<RelatorioTotaisPorCategoria />} />
         </Route>
       </Routes>
     </BrowserRouter>

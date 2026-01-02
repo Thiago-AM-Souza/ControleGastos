@@ -3,6 +3,7 @@ import type { Categoria } from "../types/models/categoria/categoria";
 import type { PaginatedResult } from "../types/utils/paginatedResult";
 import type { CadastrarCategoriaRequest } from '../types/models/categoria/requests/cadastrarCategoriaRequest';
 import type { CadastrarCategoriaResponse } from '../types/models/categoria/response/cadastrarCategoriaResponse';
+import type { ConsultaTotalPorCategoria } from '../types';
 
 export const categoriaService = {
   listar: async (pageIndex = 0, pageSize = 10): Promise<PaginatedResult<Categoria>> => {
@@ -23,5 +24,11 @@ export const categoriaService = {
     const response = await api.get('/categoria/listar-todos');
 
     return response.data;
-  }
+  },
+
+  async consultarTotais(): Promise<ConsultaTotalPorCategoria[]> {
+      const response = await api.get('/categoria/consultar-totais');
+  
+      return response.data;
+    }
 };
