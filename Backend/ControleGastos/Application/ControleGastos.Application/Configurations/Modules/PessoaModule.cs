@@ -2,6 +2,7 @@
 using ControleGastos.Application.Pessoas.Commands.Deletar;
 using ControleGastos.Application.Pessoas.Queries.ConsultaTotaisPorPessoa;
 using ControleGastos.Application.Pessoas.Queries.Listar;
+using ControleGastos.Application.Pessoas.Queries.ListarTodos;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +19,7 @@ namespace ControleGastos.Application.Configurations.Modules
             // Queries
             services.AddScoped<IRequestHandler<ListarPessoasQuery, ListarPessoasResult>, ListarPessoasQueryHandler>();
             services.AddScoped<IRequestHandler<ConsultaTotaisPorPessoaQuery, IReadOnlyList<ConsultaTotaisPorPessoaResult>>, ConsultaTotaisPorPessoaQueryHandler>();
+            services.AddScoped<IRequestHandler<ListarTodasPessoasQuery, ListarTodasPessoasResult>, ListarTodasPessoasQueryHandler>();
 
             return services;
         }

@@ -1,6 +1,7 @@
 ﻿using ControleGastos.Application.Categorias.Commands.Cadastrar;
 using ControleGastos.Application.Categorias.Queries.ConsultaTotaisPorCategoria;
 using ControleGastos.Application.Categorias.Queries.Listar;
+using ControleGastos.Application.Categorias.Queries.ListarTodos;
 using ControleGastos.BuildingBlocks.Pagination;
 using ControleGastos.WebApi.API.Requests.Categoria;
 using ControleGastos.WebApi.API.Responses.Categoria;
@@ -42,6 +43,14 @@ namespace ControleGastos.WebApi.API.Controllers
             var response = result.Adapt<ListarCategoriasResponse>();
 
             return Results.Ok(response);
+        }
+
+        [HttpGet("listar-todos")]
+        public async Task<IResult> ListarTodos()
+        {
+            var result = await _mediator.Send(new ListarTodasCategoriasQuery());
+
+            return Results.Ok(result.Categorias);
         }
 
         [HttpGet("consultar-totais")]
